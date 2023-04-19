@@ -2,7 +2,7 @@ Source: https://reactnavigation.org/docs/drawer-based-navigation
 
 Install dependencies:
 ```
-npm install @react-navigation/native @react-navigation/drawer react-native-gesture-handler react-native-reanimated
+npm install @react-navigation/native  @react-navigation/native-stack @react-navigation/drawer react-native-gesture-handler react-native-reanimated
 ```
 
 Add the following to the top of `App.js`.
