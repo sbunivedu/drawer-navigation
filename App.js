@@ -4,6 +4,12 @@ import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
+import { MaterialIcons } from '@expo/vector-icons';
+
+const getDrawerItemIcon = icon=>({color})=>(
+  <MaterialIcons name={icon} size={22} style={{ color: color }} />
+);
+
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -29,8 +35,20 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+        <Drawer.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            drawerIcon: getDrawerItemIcon("home"),
+          }}
+        />
+        <Drawer.Screen
+          name="Notifications"
+          component={NotificationsScreen}
+          options={{
+            drawerIcon: getDrawerItemIcon("info"),
+          }}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );
