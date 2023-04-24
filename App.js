@@ -136,6 +136,7 @@ export default function App() {
           options={{
             drawerIcon: getDrawerItemIcon("info"),
             drawerLabel: 'Notifications',
+            headerShown: false
           }}
         />
       </Drawer.Navigator>
